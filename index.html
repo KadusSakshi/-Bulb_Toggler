@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Toggler</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #1793a9;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            width: 150px;
+            height: auto;
+            margin: 20px;
+        }
+        .btn-container {
+            display: flex;
+            gap: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ffcc00;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #ffaa00;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bulb Toggler</h1>
+    <img id="bulb" src="https://5.imimg.com/data5/WL/SG/MY-8835990/10w-gls-light-bulb.jpg" alt="Bulb">
+    <div class="btn-container">
+        <button onclick="toggleBulb('https://png.pngtree.com/element_pic/16/12/06/5d79b5dd066400e188713f7dd417a3f4.png')">Turn On</button>
+        <button onclick="toggleBulb('https://media.istockphoto.com/id/502789173/photo/light-bulb-concept.jpg?s=612x612&w=0&k=20&c=vJfSDuFJf_4UsQcUsdMNUfDkkNU6Bf9cTHF-n4-Zwvs=')">Turn Off</button>
+    </div>
+    
+    <script>
+        function toggleBulb(image) {
+            document.getElementById('bulb').src = image;
+        }
+    </script>
+</body>
+</html>
